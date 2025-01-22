@@ -3,6 +3,33 @@
 # Mark the database schema as having been generated.
 db/schema.rb linguist-generated
 
-
 # Mark any vendored files as having been vendored.
 vendor/* linguist-vendored
+
+# Mark log files as binary to avoid diffing them.
+log/* binary
+
+# Ensure consistent line endings for text files.
+* text=auto
+
+# Custom diff driver for Markdown files.
+*.md diff=markdown
+
+# Custom diff driver for Ruby files.
+*.rb diff=ruby
+
+# Mark Gemfile.lock as binary to avoid diffing it.
+Gemfile.lock binary
+
+# Mark minified JavaScript and CSS files as generated.
+public/assets/*.min.js linguist-generated
+public/assets/*.min.css linguist-generated
+
+# Mark compiled assets as generated.
+public/assets/* linguist-generated
+
+# Mark node_modules as vendored.
+node_modules/* linguist-vendored
+
+# Mark Yarn lockfile as binary to avoid diffing it.
+yarn.lock binary
