@@ -1,1 +1,6 @@
 --require spec_helper
+--format documentation
+--color
+--profile 10
+--fail-fast
+--order rand
