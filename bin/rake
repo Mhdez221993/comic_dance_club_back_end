@@ -1,5 +1,18 @@
 #!/usr/bin/env ruby
-load File.expand_path("spring", __dir__)
-require_relative "../config/boot"
-require "rake"
-Rake.application.run
+
+begin
+    load File.expand_path("spring", __dir__)
+  rescue LoadError => e
+    warn "Spring is not available: #{e.message}"
+  end
+  
+  require_relative "../config/boot"
+  require "rake"
+  
+  begin
+    Rake.application.run
+  rescue StandardError => e
+    warn "Rake task failed: #{e.message}"
+    exit 1
+  end
+  
