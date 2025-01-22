@@ -25,6 +25,8 @@ bundle
 
 sudo service postgresql start
 
+rails db:create
+
 rails db:migrate
 
 rails s
