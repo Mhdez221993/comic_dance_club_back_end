@@ -86,4 +86,4 @@ servers:
 - url: https://{defaultHost}
   variables:
     defaultHost:
-      default: comic-dance-club.herokuapp.com
+      default: https://effective-space-waddle-vwrv97gxw5q3xq54-3000.app.github.dev
