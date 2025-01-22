@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+# Specify your gem's dependencies in dance_club_api.gemspec
+# gemspec
+
 ruby '2.7.4'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'cancancan'
