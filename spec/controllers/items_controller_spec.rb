@@ -23,7 +23,8 @@ describe 'Items controller', type: :request do
 
     post '/api/items', headers: auth_headers, params: { item: new_item }.to_json
 
-    expect(response.body).to eq items.last.to_json
+    parsed_response = JSON.parse(response.body)
+    expect(parsed_response['message']).to eq Item.last.as_json
 
     get '/api/items', headers: auth_headers
 
