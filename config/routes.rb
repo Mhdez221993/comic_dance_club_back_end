@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :reservations, only: [:index, :create]
-    resources :items, path: '/dances', only: [:index, :create, :show, :destroy]
+    resources :items, only: [:index, :create, :show, :destroy]
   end
 end
